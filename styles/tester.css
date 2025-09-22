@@ -1,0 +1,172 @@
+body {
+    padding-top: 60px;
+    background-color: blueviolet;
+}
+
+.header {
+    display: flex;
+    background-color: gray;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font: georgia;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    cursor: not-allowed;
+}
+
+.left-section-header {
+    padding: 15px;
+    color: black;
+    background-color: yellow;
+}
+
+.middle-section-header {
+    padding: 15px;
+    color: purple;
+    background-color: lightgreen;
+}
+
+.right-section-header {
+    padding: 15px;
+    color: lightsalmon;
+    background-color: blue;
+}
+
+h1 {
+    text-decoration: underline;
+    color: white;
+}
+
+h2 {
+    text-decoration: overline;
+    color: yellow;
+}
+
+h3 {
+    text-decoration: line-through;
+    color: red;
+}
+
+button {
+    border: none;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.secret-button {
+    background-color: yellow;
+    cursor: none;
+}
+
+span {
+    color: aqua;
+    background-color: orange;
+}
+
+p {
+    color: blueviolet;
+    cursor: default;
+}
+
+.rps-words {
+    background-color: black;
+    font-weight: bolder;
+}
+
+.rps-container {
+    background-color: black;
+    padding: 0
+}
+
+.left-section {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.puzzlebutton {
+    border: none;
+    background: none;
+}
+
+.puzzlebutton-icon {
+    height: 45px;
+}
+
+.puzzle1-span {
+    margin-right: 8px;
+}
+
+.middle-section {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 70px;
+    margin-right: 35px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.middle-words {
+    text-decoration: none;
+    color: black;
+    cursor: not-allowed;
+    background: none;
+    border: none;
+    font-family: 'Times New Roman';
+    padding: 0; 
+    font-size: 16px;
+}
+
+.search-bar {
+    flex: 1;
+    height: 36px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    padding-left: 10px;
+    font-family: georgia;
+    width: 0;
+}
+
+.search-bar::placeholder {
+    font-family: Georgia;
+    font-size: 16px;
+}
+
+.search-button {
+    height: 40px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+.search-icon {
+    height: 25px;
+    margin-top: 4px;
+}
+
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+
+.voice-search-icon {
+    height: 24px;
+    margin-top: 4px;
+}

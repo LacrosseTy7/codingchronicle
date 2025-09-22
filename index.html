@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="all-html">
+    <head class="html-head">
+        <title>Tester Website</title>
+        <link rel="icon" href="images/test1.png">
+    </head>
+    <body class="html-body">
+        <h1 style="color: blueviolet; margin-bottom: 50px; text-decoration: underline;">WELCOME TO THE HTML, CSS, AND JAVASCRIPT LEARNING PAGE!</h1>
+        <div class="header">
+            <div class="left-section-header">
+                Left Section of Header
+            </div>
+            <div class="middle-section-header">
+                <button class="middle-words" onclick="window.location.href = 'CodeQuest/CodeQuest.html';" style="text-decoration: none; color: black; cursor: text; background: none; border: none; font-family: 'Times New Roman'; padding: 0; font-size: 16px;">Middle Section of Header</button>
+            </div>
+            <div class="right-section-header">
+                Right Section of Header
+            </div>
+        </div>
+        <h1 class="heading-1">This is Heading 1. It is showed as h1.</h1>
+        <h2 class="heading-2">This is Heading 2. It is showed as h2.</h2>
+        <h3 class="heading-3">This is Heading 3. It is showed as h3.</h3>
+        <br>
+        <p>This is a paragraph. Above me is a break. This shows as p.</p>
+        <button class="css-adder" onclick="
+
+        document.querySelector('.html-body').innerHTML += `
+        <button class='header-adder' onclick='addHeader()'>CLICK FOR BUTTONS IN THE HEADER</button>
+        `
+        document.querySelector('.middle-words').style = ''
+
+        document.querySelector('.html-head').innerHTML = `
+        <title class='za-title'>Tester Website with CSS</title>
+        <link rel='stylesheet' href='styles/tester.css'>
+        `
+        document.querySelector('.left-section-header').innerHTML = `
+        Left Section of Header
+        <button class='secret-button' title='CLICK ME FOR SECRET!' onclick='secretButton()'></button>
+        `
+        document.querySelector('.css-adder').remove()
+        ">This is a button. Click me to see this page with css. This shows as button.</button>
+        <span style="padding-left: 25px; padding-right: 25px;">This is a span. It only takes as much as it needs. It shows as span. A button does this too.</span>
+        <button class='game-adder' onclick="
+        document.querySelector('.rps-container').innerHTML = `
+
+        <span style='display: block; padding-top: 25px; padding-bottom: 15px;' class='rps-words'>Rock Paper Scissors</span>
+
+        <button onclick='startRock()'>Rock</button>
+        <button onclick='startPaper()'>Paper</button>
+        <button onclick='startScissors()'>Scissors</button>
+        <br>
+        <br>
+        <a href='games/rock-paper-scissors.html' target='blank'><button><b>PRESS ME</b> to put this game in a new tab and make it <b><i>beautiful!!</b></i></button></a>
+        <a href='games/rock-paper-scissors.html'><button><b>PRESS ME</b> to put this game in the same tab and make it <b><i>beautiful!!</b></i></button></a>
+        <p>These buttons above use target=' ' to know whether to do it on a different tab or the same tab. But they are inside a <a href='secretwords.html' target='_blank' style='color: blue; cursor: pointer;'><u><i>link like this one</i></u></a> which makes them go to a different site! Like this one takes you IDK?</p>
+        `
+
+
+        ">Me button too. Click me for a game below.</button>
+        <p>  ^ This button uses document.querySelector('').innerHTML to change the head HTML and makes it have a link to the stylesheet and have the title of the tab be different.  ^ This button is the same for body HTML.</p>
+        <div class="rps-container"></div>
+        <br>
+        <br>
+        <p>Another thing is div. If you give it a class you can change only it with CSS and it can hold a whole bunch of things. That is how the header is made. It is a div with three more divs in it. It is showed with div.</p>
+    
+
+        
+        <script src="scripts/tester.js"></script>
+    </body>
+</html>

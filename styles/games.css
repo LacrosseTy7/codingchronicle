@@ -1,0 +1,109 @@
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.game-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.top-section {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.game-shortcut-icon {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.game-icon {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-section {
+    margin-top: 20px;
+    width: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shortcut-selector-hidden {
+    border: none;
+    background: none;
+    border-radius: 20px;
+}
+
+.shortcut-selector-icon {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.price-button {
+    background-color: black;
+    border: none;
+    padding: 9px 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.favorite-button {
+    border: none;
+    margin-left: 10px;
+    background: none;
+    cursor: pointer;
+}
+
+.favorited-icon {
+    height: 30px;
+}
+
+.boredom-button-icon {
+    width: 200px;
+    margin-bottom: -40px;
+}
+
+.boredom-button-title {
+    color: red;
+    font-family: Georgia;
+}
+
+.rock-paper-scissors-title {
+    font-family: arial;
+    color: rgb(243, 119, 52);
+    font-weight: 700;
+}
+
+.escaping-the-prison-title {
+    font-family: Georgia;
+}
+
+.abandoned-title {
+    font-family: Verdana;
+}
+
+.castle-wars-title {
+    font-size: 18px;
+    font-family: Impact;
+}
