@@ -1,250 +1,157 @@
+// makes canvas
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+// sets width and height
 canvas.width = 1024
 canvas.height = 576
 
-c.fillRect(0, 0, canvas.width, canvas.height)
+// this creates the collisions and groups them
+const collisionsMap = []
+for (let i = 0; i < collisions.length; i += 70) {
+    collisionsMap.push(collisions.slice(i, i + 70))
+}
 
-const gravity = 0.7
-
-class Sprite {
-    constructor({position, velocity, color = 'red', offset}) {
+class Boundary {
+    constructor({position}) {
         this.position = position
-        this.velocity = velocity
-        this.width = 50
-        this.height = 150
-        this.lastKey
-        this.attackBox = {
-            position: {
-                x: this.position.x,
-                y: this.position.y
-            },
-            offset,
-            width: 100,
-            height: 50,
-        }
-        this.color = color
-        this.isAttacking
-        this.health = 100
+        this.width = 48
+        this.height = 48
     }
 
     draw() {
-        c.fillStyle = this.color
-        c.fillRect(this.position.x, this.position.y, this.width, this.height)
-
-        // attack box
-        if (this.isAttacking) {
-        c.fillStyle = 'green'
-        c.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height)
-        }
-    }
-
-    update() {
-        this.draw()
-        this.attackBox.position.x = this.position.x + this.attackBox.offset.x
-        this.attackBox.position.y = this.position.y
-        
-        this.position.x += this.velocity.x
-        this.position.y += this.velocity.y
-
-        if (this.position.y + this.height + this.velocity.y >= canvas.height) {
-            this.velocity.y = 0
-        } else this.velocity.y += gravity
-    }
-
-    attack() {
-        this.isAttacking = true
-        setTimeout(() => {
-            this.isAttacking = false
-        }, 100)
+        c.fillRect(this.position.x, this.position.y, this.position.width, this.height)
     }
 }
 
-const player = new Sprite({
-    position: {
-        x: 0,
-        y: 0
-    },
-    velocity: {
-        x: 0,
-        y: 10
-    },
-    offset: {
-        x: 0,
-        y: 0
+// builds backdround
+const image = new Image()
+image.src = './images/map.png'
+
+// builds player
+const playerImage = new Image()
+playerImage.src = './images/playerDown.png'
+
+// when sprite is used you can draw easier
+class Sprite {
+    constructor({
+        position,
+        velocity,
+        image
+    }) {
+        this.position = position
+        this.image = image
     }
+
+    draw() {
+        c.drawImage(this.image, this.position.x, this.position.y)
+    }
+}
+
+// this makes a background that's moveable
+const background = new Sprite({
+    position: {
+        x: -1074,
+        y: -450
+    },
+    image: image
 })
 
-const enemy = new Sprite({
-    position: {
-        x: 400,
-        y: 100
-    },
-    velocity: {
-        x: 0,
-        y: 0
-    },
-    color: 'blue',
-    offset: {
-        x: -50,
-        y: 0
-    }
-})
-
-console.log(player)
-
+// this makes an object for all the keys
 const keys = {
+    w: {
+        pressed: false
+    },
     a: {
+        pressed: false
+    },
+    s: {
         pressed: false
     },
     d: {
         pressed: false
-    },
-    ArrowRight: {
-        pressed: false
-    },
-    ArrowLeft: {
-        pressed: false
     }
 }
 
-function rectangularCollision({
-    rectangle1, rectangle2
-}) {
-    return (
-        rectangle1.attackBox.position.x + rectangle1.attackBox.width >= rectangle2.position.x && rectangle1.attackBox.position.x <= rectangle2.position.x + rectangle2.width && rectangle1.attackBox.position.y + rectangle1.attackBox.height >= rectangle2.position.y && rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
-    )
-}
-
-function determineWinner({player, enemy, timerId}) {
-    clearTimeout(timerId)
-    document.querySelector('#displayText').style.display = 'flex'
-    if (player.health === enemy.health) {
-        document.querySelector('#displayText').innerHTML = 'Tie'
-    } else if (player.health > enemy.health) {
-        document.querySelector('#displayText').innerHTML = 'Player 1 Wins'
-    } else if (player.health < enemy.health) {
-        document.querySelector('#displayText').innerHTML = 'Player 2 Wins'
-    }
-}
-
-let timerId
-let timer = 60
-function decreaseTimer() {
-    if (timer > 0) {
-        timerId = setTimeout(decreaseTimer, 1000)
-        timer--
-        document.querySelector('#timer').innerHTML = timer
-    } else if (timer === 0) {
-        determineWinner({player, enemy, timerId})
-    }
-}
-
-decreaseTimer()
-
+// this does a lot, it runs an animation loop
 function animate() {
+    // this line makes it an infinite loop
     window.requestAnimationFrame(animate)
-    c.fillStyle = 'black'
-    c.fillRect(0, 0, canvas.width, canvas.height)
-    player.update()
-    enemy.update()
 
-    player.velocity.x = 0
-    enemy.velocity.x = 0
-    
-    // player movement
-    if (keys.a.pressed && player.lastKey === 'a') {
-        player.velocity.x = -5
-    } else if (keys.d.pressed && player.lastKey === 'd') {
-        player.velocity.x = 5
-    }
+    // this line uses the sprite to make the background
+    background.draw()
 
-    // enemy movement
-    if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
-        enemy.velocity.x = -5
-    } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
-        enemy.velocity.x = 5
-    }
+    // this makes the player centered and draws it
+    c.drawImage(
+    playerImage, 
+    0,
+    0,
+    playerImage.width / 4,
+    playerImage.height,
+    canvas.width / 2 - (playerImage.width / 4) / 2, 
+    canvas.height / 2 - playerImage.height / 2,
+    playerImage.width / 4,
+    playerImage.height
+    )
 
-    // detect for collision
-    if (rectangularCollision({
-        rectangle1: player,
-        rectangle2: enemy
-    }) && player.isAttacking) {
-        player.isAttacking = false
-        enemy.health -= 20
-        document.querySelector('#enemyHealth').style.width = enemy.health + '%'
-    }
-
-    if (rectangularCollision({
-        rectangle1: enemy,
-        rectangle2: player
-    }) && enemy.isAttacking) {
-        enemy.isAttacking = false
-        player.health -= 20
-        document.querySelector('#playerHealth').style.width = player.health + '%'
-    }
-
-    //end game based on health
-    if (enemy.health <= 0 || player.health <= 0) {
-        determineWinner({player, enemy, timerId})
+    // this sees if a letter has been pressed and it was the last one pressed and executes what to do depending on the letter
+    if (keys.w.pressed && lastKey === 'w') {
+        background.position.y += 3
+    } else if (keys.s.pressed && lastKey === 's') {
+        background.position.y -= 3
+    } else if (keys.a.pressed && lastKey === 'a') {
+        background.position.x += 3
+    } else if (keys.d.pressed && lastKey === 'd') {
+        background.position.x -= 3
     }
 }
 
+// this starts the animation loop
 animate()
 
-window.addEventListener('keydown', (event) => {
-    switch (event.key) {
-        case 'd':
-            player.lastKey = 'd'
-            keys.d.pressed = true
-        break
-        case 'a':
-            player.lastKey = 'a'
-            keys.a.pressed = true
-        break
-        case 'w':
-            player.velocity.y = -20
-        break
-        case ' ':
-            player.attack()
-        break
+// this makes a variable for know which letter was last
+let lastKey = ''
 
-        case 'ArrowRight':
-            enemy.lastKey = 'ArrowRight'
-            keys.ArrowRight.pressed = true
-        break
-        case 'ArrowLeft':
-            enemy.lastKey = 'ArrowLeft'
-            keys.ArrowLeft.pressed = true
-        break
-        case 'ArrowUp':
-            enemy.velocity.y = -20
-        break
-        case 'ArrowDown':
-            enemy.attack()
-        break
+// this uses the object to change if the keys are pressed or not
+window.addEventListener('keydown', (e) => {
+    switch (e.key) {
+        case 'w':
+            keys.w.pressed = true
+            lastKey = 'w'
+            break
+        
+        case 'a':
+            keys.a.pressed = true
+            lastKey = 'a'
+            break
+        
+        case 's':
+            keys.s.pressed = true
+            lastKey = 's'
+            break
+
+        case 'd':
+            keys.d.pressed = true
+            lastKey = 'd'
+            break
     }
 })
-
-window.addEventListener('keyup', (event) => {
-    switch (event.key) {
-        case 'd':
-            keys.d.pressed = false
-        break
+window.addEventListener('keyup', (e) => {
+    switch (e.key) {
+        case 'w':
+            keys.w.pressed = false
+            break
+        
         case 'a':
             keys.a.pressed = false
-        break
-    }
+            break
+        
+        case 's':
+            keys.s.pressed = false
+            break
 
-    // enemy keys
-    switch (event.key) {
-        case 'ArrowRight':
-            keys.ArrowRight.pressed = false
-        break
-        case 'ArrowLeft':
-            keys.ArrowLeft.pressed = false
-        break
+        case 'd':
+            keys.d.pressed = false
+            break
     }
 })
