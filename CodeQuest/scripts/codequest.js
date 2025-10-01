@@ -46,8 +46,6 @@ collisionsMap.forEach((row, i) => {
     })
 })
 
-console.log(boundaries)
-
 // builds backdround
 const image = new Image()
 image.src = './images/map.png'
