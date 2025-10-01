@@ -219,6 +219,13 @@ let users = [
         shortcuts: "Angry Birds Escape Road Doge Miner Escaping the Prison",
         favorites: "Angry Birds Escape Road Doge Miner Escaping the Prison PolyTrack",
         gamesOwned: "Angry Birds Escape Road Doge Miner Escaping the Prison"
+    }, {
+        username: "dinomax312",
+        email: "barnettmax12@gmail.com",
+        password: "M@xwell13",
+        shortcuts: "Angry Birds Need For Speed Burrito Bison Launcha Libre PolyTrack",
+        favorites: "Angry Birds Need For Speed Burrito Bison Launcha Libre PolyTrack Rock Paper Scissors",
+        gamesOwned: "Angry Birds Need For Speed Burrito Bison Launcha Libre PolyTrack Rock Paper Scissors"
     }
 ];
 
