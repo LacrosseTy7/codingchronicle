@@ -400,7 +400,7 @@ function openProfile() {
         <button class="profile-button">My Account</button>
         <button onclick="ADMIN()" class="admin-button">ADMIN Manage</button>
         <button class="contact-button"><b>Contact Us</b></button>
-        <button class="sign-out-button" onclick="localStorage.removeItem('currentUser'); window.location.replace('secret.html')">Sign Out</button>
+        <button class="sign-out-button" onclick="localStorage.removeItem('currentUser'); window.location.replace('rdthddhfgrdhtjyrjyrd.html')">Sign Out</button>
         <button onclick="setToDefault()">DEFAULT</button>
         </div>
     `
@@ -410,7 +410,7 @@ function openProfile() {
         <button class="profile-button">My Profile</button>
         <button class="profile-button">My Account</button>
         <button class="contact-button"><b>Contact Us</b></button>
-        <button class="sign-out-button" onclick="localStorage.removeItem('currentUser'); window.location.replace('secret.html')">Sign Out</button>
+        <button class="sign-out-button" onclick="localStorage.removeItem('currentUser'); window.location.replace('rdthddhfgrdhtjyrjyrd.html')">Sign Out</button>
         </div>
     `
     }
