@@ -5,164 +5,164 @@ const rightHTML = document.querySelector('.right-section-header').innerHTML
 //This array is all of the games on the website
 const games = [{
     name: 'Boredom Button',
-    image: 'images/jhgh7632:hjaghj&ksalsghg:/button.png',
+    image: 'images/ebd3jso5iogfsjh25lsdklj/button.png',
     class: 'boredom-button',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/boredom button.html"><img class="bored-button-shortcut-icon game-shortcut-icon" src="images/jhgh7632:hjaghj&ksalsghg:/button.png"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/boredom button.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/boredom button.html"><img class="bored-button-shortcut-icon game-shortcut-icon" src="images/ebd3jso5iogfsjh25lsdklj/button.png"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/boredom button.html',
     price: 'Free'
 }, {
     name: 'Rock Paper Scissors',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/Rock-Paper-Scissors-Logo.webp',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/Rock-Paper-Scissors-Logo.webp',
     class: 'rock-paper-scissors',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/rock-paper-scissors.html"><img class="rps-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/Rock-Paper-Scissors-Logo.webp"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/rock-paper-scissors.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/rock-paper-scissors.html"><img class="rps-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/Rock-Paper-Scissors-Logo.webp"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/rock-paper-scissors.html',
     price: 'Free'
 }, {
     name: 'Escaping the Prison',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/henry-etp-logo.jpg',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/henry-etp-logo.jpg',
     class: 'escaping-the-prison',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/stickminescapingprison.html"><img class="henry-etp-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/henry-etp-logo.jpg"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/stickminescapingprison.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/stickminescapingprison.html"><img class="henry-etp-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/henry-etp-logo.jpg"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/stickminescapingprison.html',
     price: 1
 }, {
     name: 'Escape 40 Times',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/40xescape.jpg',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/40xescape.jpg',
     class: 'escape-40x',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/40exescape.html"><img class="40x-escape-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/40xescape.jpg"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/40exescape.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/40exescape.html"><img class="40x-escape-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/40xescape.jpg"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/40exescape.html',
     price: 0.34
 }, {
     name: 'Abandoned',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/abandoned.jpg',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/abandoned.jpg',
     class: 'abandoned',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/abandoned.html"><img class="abandoned-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/abandoned.jpg"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/abandoned.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/abandoned.html"><img class="abandoned-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/abandoned.jpg"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/abandoned.html',
     price: 0.5
 }, {
     name: 'Angry Birds',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/angry birds.png',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/angry birds.png',
     class: 'angry-birds',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/Angrybirds.html"><img class="angry-birds-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/angry birds.png"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/Angrybirds.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/Angrybirds.html"><img class="angry-birds-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/angry birds.png"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/Angrybirds.html',
     price: 1
 }, {
     name: 'Black Jack Battle',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/blackjackbattle.webp',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/blackjackbattle.webp',
     class: 'black-jack-battle',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/blackjackbattle.html"><img class="bjb-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/blackjackbattle.webp"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/blackjackbattle.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/blackjackbattle.html"><img class="bjb-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/blackjackbattle.webp"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/blackjackbattle.html',
     price: 'Free'
 }, {
     name: 'Castle Wars Modern',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/castlewars.jpg',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/castlewars.jpg',
     class: 'castle-wars',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/castlewarsmodern.html"><img class="castle-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/castlewars.jpg"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/castlewarsmodern.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/castlewarsmodern.html"><img class="castle-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/castlewars.jpg"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/castlewarsmodern.html',
     price: 'Free'
 }, {
     name: 'Cookie Clicker',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/cookieclicker',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/cookieclicker',
     class: 'cookie-clicker',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/cookieclickercool.html"><img class="cc-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/cookieclicker"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/cookieclickercool.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/cookieclickercool.html"><img class="cc-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/cookieclicker"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/cookieclickercool.html',
     price: 'Free'
 }, {
     name: 'Need For Speed',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/needforspeed',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/needforspeed',
     class: 'need-for-speed',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/nfsmostwanted.html"><img class="nfs-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/needforspeed"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/nfsmostwanted.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/nfsmostwanted.html"><img class="nfs-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/needforspeed"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/nfsmostwanted.html',
     price: 1.25
 }, {
     name: 'Obby Robby',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/obbyrobby',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/obbyrobby',
     class: 'obby-robby',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/obbyonlyup.html"><img class="or-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/obbyrobby"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/obbyonlyup.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/obbyonlyup.html"><img class="or-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/obbyrobby"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/obbyonlyup.html',
     price: 0.78
 }, {
     name: 'Kitten Cannon',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/kittencannon',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/kittencannon',
     class: 'kitten-cannon',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/simplePlanes.html"><img class="kc-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/kittencannon"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/simplePlanes.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/simplePlanes.html"><img class="kc-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/kittencannon"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/simplePlanes.html',
     price: 0.43
 }, {
     name: '1v1 Lol',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/1v1lol',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/1v1lol',
     class: 'lol-1v1',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/1v1maybeidk.html"><img class="1v1-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/1v1lol"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/1v1maybeidk.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/1v1maybeidk.html"><img class="1v1-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/1v1lol"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/1v1maybeidk.html',
     price: 1.2
 }, {
     name: '12 Mini Battles',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/minibattles',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/minibattles',
     class: 'mini-battles',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/12minibattles.html"><img class="12mb-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/minibattles"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/12minibattles.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/12minibattles.html"><img class="12mb-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/minibattles"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/12minibattles.html',
     price: 1.68
 }, {
     name: 'Banjo and Kazooie',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/banjokazooie',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/banjokazooie',
     class: 'banjo-kazooie',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/banjokazooie.html"><img class="bk-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/banjokazooie"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/banjokazooie.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/banjokazooie.html"><img class="bk-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/banjokazooie"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/banjokazooie.html',
     price: 1.47
 }, {
     name: 'Bit Planes',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/bitplanes',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/bitplanes',
     class: 'bit-planes',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/bitplanes.html"><img class="bp-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/bitplanes"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/bitplanes.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/bitplanes.html"><img class="bp-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/bitplanes"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/bitplanes.html',
     price: 0.45
 }, {
     name: 'Block Blast',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/blockblast',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/blockblast',
     class: 'block-blast',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/blockblast.html"><img class="blbl-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/blockblast"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/blockblast.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/blockblast.html"><img class="blbl-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/blockblast"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/blockblast.html',
     price: 0.89
 }, {
     name: 'Burrito Bison Launcha Libre',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/burritobison',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/burritobison',
     class: 'burrito-bison',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/burritobisonlaunchalibre.html"><img class="bbll-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/burritobison"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/burritobisonlaunchalibre.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/burritobisonlaunchalibre.html"><img class="bbll-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/burritobison"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/burritobisonlaunchalibre.html',
     price: 1.23
 }, {
     name: 'Diddy Kong Racing',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/kongracing',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/kongracing',
     class: 'kong-racing',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/diddykongracing.html"><img class="dkr-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/kongracing"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/diddykongracing.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/diddykongracing.html"><img class="dkr-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/kongracing"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/diddykongracing.html',
     price: 0.93
 }, {
     name: 'Doge Miner',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/dogeminer',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/dogeminer',
     class: 'doge-miner',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/dogeminer.html"><img class="dm-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/dogeminer"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/dogeminer.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/dogeminer.html"><img class="dm-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/dogeminer"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/dogeminer.html',
     price: 0.76
 }, {
     name: 'Escape Road',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/escaperoad',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/escaperoad',
     class: 'escape-road',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/escaperoad.html"><img class="er-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/escaperoad"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/escaperoad.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/escaperoad.html"><img class="er-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/escaperoad"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/escaperoad.html',
     price: 0.69
 }, {
     name: 'Feed Us 3',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/feedus',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/feedus',
     class: 'feed-us',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/feedus3.html"><img class="fu3-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/feedus"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/feedus3.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/feedus3.html"><img class="fu3-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/feedus"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/feedus3.html',
     price: 0.16
 }, {
     name: 'PolyTrack',
-    image: 'jhgh7632:hjaghj&ksalsghg:/images/polytrack',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/polytrack',
     class: 'poly-track',
-    shortcutHTML: '<a href="jhgh7632:hjaghj&ksalsghg:/polytrack.html"><img class="poly-shortcut-icon game-shortcut-icon" src="jhgh7632:hjaghj&ksalsghg:/images/polytrack"></a>',
-    href: 'jhgh7632:hjaghj&ksalsghg:/polytrack.html',
+    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/polytrack.html"><img class="poly-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/polytrack"></a>',
+    href: 'ebd3jso5iogfsjh25lsdklj/polytrack.html',
     price: 2.46
 }]
 
