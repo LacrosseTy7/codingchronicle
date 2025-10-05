@@ -1,0 +1,9 @@
+These are the steps to have it be a different map:
+
+1. Make a map with the template I have in Tiled.
+2. Export as image everything but Foreground Objects, Battle Zones, and Collision with a zoom level of 400% and name it Ty's Town.png and put it in images.
+3. Export as image again but this time with ONLY Foreground Objects and again a zoom level of 400% and name it foregroundObjects.png and put it in images.
+4. Export as and name it Ty's Town Map.png but DON'T put it in images.
+5. Open Ty's Town Map.png in Notepad "Just Once" and use Ctrl + F to find Collision.
+6. Go up and copy the array for Collision and paste it in the file collisions.js.
+7. Then do the same for Battle Zones and put that array in battleZones.js.
