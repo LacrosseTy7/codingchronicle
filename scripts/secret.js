@@ -67,13 +67,6 @@ const games = [{
     href: 'ebd3jso5iogfsjh25lsdklj/cookieclickercool.html',
     price: 'Free'
 }, {
-    name: 'Need For Speed',
-    image: 'ebd3jso5iogfsjh25lsdklj/images/needforspeed',
-    class: 'need-for-speed',
-    shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/nfsmostwanted.html"><img class="nfs-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/needforspeed"></a>',
-    href: 'ebd3jso5iogfsjh25lsdklj/nfsmostwanted.html',
-    price: 'Free'
-}, {
     name: 'Obby Robby',
     image: 'ebd3jso5iogfsjh25lsdklj/images/obbyrobby',
     class: 'obby-robby',
@@ -170,6 +163,62 @@ const games = [{
     class: 'papas',
     shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/papa's.html"><img class="papas-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/papas-logo"></a>`,
     href: "ebd3jso5iogfsjh25lsdklj/papa's.html",
+    price: 'Free'
+}, {
+    name: 'Infinite Craft',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/infinitecraft-logo',
+    class: 'infinite-craft',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/infinitecraft.html"><img class="infinite-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/infinitecraft-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/infinitecraft.html",
+    price: 'Free'
+}, {
+    name: 'Drive Mad',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/drivemad-logo',
+    class: 'drive-mad',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/drivemad.html"><img class="drive-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/drivemad-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/drivemad.html",
+    price: 'Free'
+}, {
+    name: 'Geometry Dash Lite',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/gdl-logo',
+    class: 'g-d-l',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/geometrydashlite.html"><img class="dash-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/gdl-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/geometrydashlite.html",
+    price: 'Free'
+}, {
+    name: 'Ocarina of Time',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/oot-logo',
+    class: 'oot',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/ocarinaoftime.html"><img class="oot-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/oot-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/ocarinaoftime.html",
+    price: 'Free'
+}, {
+    name: 'UnderTale',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/undertale-logo',
+    class: 'undertale',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/undertale.html"><img class="under-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/undertale-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/undertale.html",
+    price: 'Free'
+}, {
+    name: 'Subway Surfers',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/subwaysurf-logo',
+    class: 'subway-surf',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/subwaysurfers.html"><img class="subsurf-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/subwaysurf-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/subwaysurfers.html",
+    price: 'Free'
+}, {
+    name: 'Monkey Mart',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/monkey-logo',
+    class: 'monkey-mart',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/monkeymart.html"><img class="monkey-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/monkey-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/monkeymart.html",
+    price: 'Free'
+}, {
+    name: 'Among Us',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/amongus-logo',
+    class: 'among-us',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/amongus.html"><img class="among-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/amongus-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/amongus.html",
     price: 'Free'
 }]
 
