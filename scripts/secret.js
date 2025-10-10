@@ -220,6 +220,13 @@ const games = [{
     shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/amongus.html"><img class="among-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/amongus-logo"></a>`,
     href: "ebd3jso5iogfsjh25lsdklj/amongus.html",
     price: 'Free'
+}, {
+    name: 'Ragdoll Archers',
+    image: 'ebd3jso5iogfsjh25lsdklj/images/ragdolla-logo',
+    class: 'ragdoll-archers',
+    shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/ragdollarchers.html"><img class="ragarch-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/ragdolla-logo"></a>`,
+    href: "ebd3jso5iogfsjh25lsdklj/ragdollarchers.html",
+    price: 'Free'
 }]
 
 
