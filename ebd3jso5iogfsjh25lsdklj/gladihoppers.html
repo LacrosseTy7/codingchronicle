@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Gladihoppers</title>
+  <meta name="description" content="An OpenProcessing sketch exploring cartoon character drawing using p5.js.">
+  <meta name="author" content="Student #9.1 - Visual Computing">
+  <meta name="keywords" content="OpenProcessing, sketch, p5.js, cartoon, character, drawing, generative art">
+
+  <!-- Fake external libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://openprocessing.org/openprocessing_assets/js/openprocessing_sketch.js"></script>
+
+  <!-- Unity config -->
+  <script>
+    window.config = {
+      loader: 'unity',
+      debug: false,
+      maxRatio: 16 / 9,
+      minRatio: 9 / 16,
+
+      title: 'Gladihoppers',
+      thumbnail: 'https://cdn.jsdelivr.net/gh/genizy/gh/patch/png/null.png',
+      numScreenshots: 5,
+
+      unityVersion: '2019.3.13f1',
+      unityWebglBuildUrl: 'https://cdn.jsdelivr.net/gh/genizy/gh/Build/Gladihoppers.json',
+
+      fileSize: 23,
+      cachedDecompressedFileSizes: {
+        'Gladihoppers.data.unityweb': 17409938,
+        'Gladihoppers.wasm.code.unityweb': 6410659,
+        'Gladihoppers.wasm.framework.unityweb': 91463
+      },
+    };
+  </script>
+</head>
+<body>
+  <!-- Unity loader -->
+  <script src="https://cdn.jsdelivr.net/gh/genizy/gh/patch/js/poki-master-loader.js"></script>
+
+  <!-- Fake p5.js sketch -->
+  <script src="mySketch.js"></script>
+
+  <script>
+    // OpenProcessing sketch: Drawing a cartoon wizard with p5.js
+
+    function setup() {
+    createCanvas(800, 600);
+    background(255);
+    // drawWizard(); // disabled for now
+    }
+
+    function draw() {
+    // nothing happens here
+    noLoop();
+    }
+
+    function drawWizard() {
+    // Simulated cartoon character drawing function
+    fill(255, 200, 0);
+    ellipse(400, 300, 200, 200); // Head
+
+    // Hat
+    fill(100, 0, 200);
+    triangle(350, 200, 450, 200, 400, 100);
+
+    // Eyes
+    fill(0);
+    ellipse(380, 290, 20, 20);
+    ellipse(420, 290, 20, 20);
+    }
+  </script>
+</body>
+</html>
