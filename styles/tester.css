@@ -59,7 +59,7 @@ button {
 
 .secret-button {
     background-color: yellow;
-    cursor: none;
+    cursor: not-allowed;
 }
 
 span {
