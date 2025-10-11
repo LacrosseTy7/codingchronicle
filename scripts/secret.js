@@ -466,7 +466,6 @@ function openProfile() {
         <button onclick="ADMIN()" class="admin-button">ADMIN Manage</button>
         <button class="contact-button"><b>Contact Us</b></button>
         <button class="sign-out-button" onclick="localStorage.removeItem('currentUser'); window.location.replace('rdthddhfgrdhtjyrjyrd.html')">Sign Out</button>
-        <button onclick="setToDefault()">DEFAULT</button>
         </div>
     `
     } else {
@@ -504,10 +503,11 @@ function ADMIN() {
     `
 }
 
+let adminPassword = localStorage.getItem('admin-password')
 
 //This code checks to see if the admin password is correct and if yes brings you to the admin page
 function adminPasswordCheck() {
-    if (document.querySelector('.admin-input').value === 'manageUMM???') {
+    if (document.querySelector('.admin-input').value === adminPassword) {
         document.querySelector('.admin-container').remove()
         document.querySelector('body').classList.add('period-selector')
         document.querySelector('body').innerHTML = `
@@ -561,8 +561,8 @@ function adminPage(period) {
     document.querySelector('title').innerHTML = className
     document.querySelector('body').innerHTML = `
     <button>SEND OUT NOTIFICATIONS</button>
-    <button>CHANGE WEB PASSWORD</button>
-    <button>CHANGE ADMIN PASSWORD</button>
+    <button onclick="webPassword = prompt('Insert new password:'); localStorage.setItem('web-password', webPassword)">CHANGE WEB PASSWORD</button>
+    <button onclick="adminPassword = prompt('Insert new password:'); localStorage.setItem('admin-password', adminPassword)">CHANGE ADMIN PASSWORD</button>
     <button>ADD GAME</button>
     <button>DELETE PROFILES</button>
     <button>CHECK INBOX</button>
@@ -570,7 +570,6 @@ function adminPage(period) {
     <p class="users-paragraph"></p>
     `
 }
-
 
 //This code puts the games into the body of the page
 let gameHTML = '';

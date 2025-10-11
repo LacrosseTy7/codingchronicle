@@ -75,7 +75,7 @@ function startScissors() {
 
 function secretButton() {
     const result = prompt("You thought you could get the secret super easily. Well there's one more step. What's the password?")
-    if (result === 'ummmmmmmmmm?????') {
+    if (result === webPassword) {
         window.location.replace('rdthddhfgrdhtjyrjyrd.html')
     } else {
         alert('WRONG!!! YOU LOSE!')
