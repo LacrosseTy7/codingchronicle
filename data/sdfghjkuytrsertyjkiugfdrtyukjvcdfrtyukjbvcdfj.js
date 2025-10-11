@@ -1,4 +1,3 @@
-//This array is all of the games on the website
 const games = [
     {
         name: 'Boredom Button',
