@@ -223,5 +223,12 @@ const games = [
         shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/ragdollarchers.html"><img class="ragarch-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/ragdolla-logo"></a>`,
         href: "ebd3jso5iogfsjh25lsdklj/ragdollarchers.html",
         price: 'Free'
+    }, {
+        name: 'Ragdoll Hit',
+        image: 'ebd3jso5iogfsjh25lsdklj/images/ragdollhit-logo',
+        class: 'ragdoll-hit',
+        shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/ragdollhit.html"><img class="raghit-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/ragdollhit-logo"></a>`,
+        href: "ebd3jso5iogfsjh25lsdklj/ragdollhit.html",
+        price: 'Free'
     }
 ];
