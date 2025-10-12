@@ -54,8 +54,8 @@ let users = [
         username: "dinomax312",
         email: "barnettmax12@gmail.com",
         password: "M@xwell13",
-        shortcuts: ["Angry Birds", "Need For Speed", "Burrito Bison", "Launcha Libre", "PolyTrack"],
-        favorites: "Angry Birds Need For Speed Burrito Bison Launcha Libre PolyTrack Rock Paper Scissors",
-        gamesOwned: "Angry Birds Need For Speed Burrito Bison Launcha Libre PolyTrack Rock Paper Scissors"
+        shortcuts: ["Angry Birds", "Papas Collection", "Burrito Bison Launcha Libre", "PolyTrack"],
+        favorites: "Angry Birds Papas Collection Burrito Bison Launcha Libre PolyTrack Rock Paper Scissors",
+        gamesOwned: "Angry Birds Papas Collection Burrito Bison Launcha Libre PolyTrack Rock Paper Scissors"
     }
 ];
