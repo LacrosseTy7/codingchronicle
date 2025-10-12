@@ -261,8 +261,7 @@ function closeProfile() {
 function ADMIN() {
     document.querySelector('.profile-page').innerHTML += `
     <div class="admin-container">
-    <input class="admin-input" type="password" placeholder="Password...">
-    <button onclick="adminPasswordCheck()">Continue</button>
+    <input onkeydown="if (event.key === 'Enter') {adminPasswordCheck()}" class="admin-input" type="password" placeholder="Password...">
     </div>
     `
 }

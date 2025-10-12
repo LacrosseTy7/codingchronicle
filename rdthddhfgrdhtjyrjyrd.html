@@ -18,7 +18,7 @@
                 <div class="shortcut-container"></div>
             </div>
             <div class="middle-section-header">
-                <input class='search-bar' type='text' placeholder='Search'>
+                <input onkeydown="if (event.key === 'Enter') {searchFor()}" class='search-bar' type='text' placeholder='Search'>
                 <button onclick="searchFor()" class="search-button">
                     <img class="search-icon" src="images/search.svg">
                 </button>
