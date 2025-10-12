@@ -35,7 +35,7 @@ function searchFor() {
                                         <div><img class="${game.class}-icon game-icon" src="${game.image}"></div>
                                         <div class="${game.class}-title game-title">${game.name}</div>
                                     </a>
-                                    <div class="bottom-section">
+                                    <div class="${game.class}-bottom-section">
                                         <button class="${game.class}-price-button price-button">OWNED</button>
                                         <button onclick="favoritesToggle('${game.name}', '${game.class}')" class="favorite-button"><img src="images/non-favorited-game-icon.png" class="${game.class}-favorited favorited-icon"></button>
                                     </div>
@@ -48,7 +48,7 @@ function searchFor() {
                                         <div><img class="${game.class}-icon game-icon" src="${game.image}"></div>
                                         <div class="${game.class}-title game-title">${game.name}</div>
                                     </a>
-                                    <div class="bottom-section">
+                                    <div class="${game.class}-bottom-section">
                                         <button onclick="buyGame('${game.name}', '${game.class}')" class="${game.class}-price-button price-button">$${game.price.toFixed(2)}</button>
                                         <button onclick="favoritesToggle('${game.name}', '${game.class}')" class="favorite-button"><img src="images/non-favorited-game-icon.png" class="${game.class}-favorited favorited-icon"></button>
                                     </div>
@@ -61,7 +61,7 @@ function searchFor() {
                                         <div><img class="${game.class}-icon game-icon" src="${game.image}"></div>
                                         <div class="${game.class}-title game-title">${game.name}</div>
                                     </a>
-                                    <div class="bottom-section">
+                                    <div class="${game.class}-bottom-section">
                                         <button onclick="buyGame('${game.name}', '${game.class}')" class="${game.class}-price-button price-button">Free</button>
                                         <button onclick="favoritesToggle('${game.name}', '${game.class}')" class="favorite-button"><img src="images/non-favorited-game-icon.png" class="${game.class}-favorited favorited-icon"></button>
                                     </div>
@@ -346,7 +346,7 @@ function updateGames() {
                         <div><img class="${game.class}-icon game-icon" src="${game.image}"></div>
                         <div class="${game.class}-title game-title">${game.name}</div>
                     </a>
-                    <div class="bottom-section">
+                    <div class="${game.class}-bottom-section">
                         <button onclick="buyGame('${game.name}', '${game.class}')" class="${game.class}-price-button price-button">$${game.price.toFixed(2)}</button>
                         <button onclick="favoritesToggle('${game.name}', '${game.class}')" class="favorite-button"><img src="images/non-favorited-game-icon.png" class="${game.class}-favorited favorited-icon"></button>
                     </div>
@@ -359,7 +359,7 @@ function updateGames() {
                         <div><img class="${game.class}-icon game-icon" src="${game.image}"></div>
                         <div class="${game.class}-title game-title">${game.name}</div>
                     </a>
-                    <div class="bottom-section">
+                    <div class="${game.class}-bottom-section">
                         <button onclick="buyGame('${game.name}', '${game.class}')" class="${game.class}-price-button price-button">Free</button>
                         <button onclick="favoritesToggle('${game.name}', '${game.class}')" class="favorite-button"><img src="images/non-favorited-game-icon.png" class="${game.class}-favorited favorited-icon"></button>
                     </div>
@@ -409,6 +409,40 @@ function buyGame(gameName, gameClass) {
                 })
             }
         }
+    })
+}
+
+
+function addShortcuts() {
+    games.forEach((game) => {
+        users.forEach((user) => {
+            if (user.username === userInPlay) {
+                if (user.shortcuts.includes(game.name)) {
+                    document.querySelector(`.${game.class}-bottom-section`).innerHTML += `
+                        <button class="shortcut-selector-hidden"><img class="shortcut-selector-icon" src="images/Checked Box.png"></button>
+                    `
+                } else {
+                    document.querySelector(`.${game.class}-bottom-section`).innerHTML += `
+                        <button class="shortcut-selector-hidden"><img class="shortcut-selector-icon" src="images/Unchecked Box.png"></button>
+                    `
+                }
+                document.querySelector('.add-shortcut-icon').src = 'images/exit-shortcut-icon'
+                document.querySelector('.add-shortcut-icon').onclick = function() {
+                    closeShortcuts()
+                }
+            }
+        })
+    })
+}
+
+
+function closeShortcuts() {
+    document.querySelector('.add-shortcut-icon').src = 'images/add-shortcut-icon.png'
+    document.querySelector('.add-shortcut-icon').onclick = function() {
+        addShortcuts()
+    }
+    games.forEach((game) => {
+        document.querySelector(`.shortcut-selector-hidden`).remove()
     })
 }
 

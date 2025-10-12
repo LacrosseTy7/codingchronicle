@@ -36,6 +36,7 @@
 .game-title {
     color: black;
     font-size: 20px;
+    margin-bottom: 19px;
 }
 
 .bottom-section {
@@ -50,6 +51,7 @@
     border: none;
     background: none;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .shortcut-selector-icon {
