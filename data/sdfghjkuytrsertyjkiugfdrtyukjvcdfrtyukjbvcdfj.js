@@ -105,6 +105,13 @@ const games = [
         href: 'ebd3jso5iogfsjh25lsdklj/bitplanes.html',
         price: 'Free'
     }, {
+        name: 'Gladihoppers',
+        image: 'ebd3jso5iogfsjh25lsdklj/images/gladihoppers-logo',
+        class: 'gladihoppers',
+        shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/gladihoppers.html"><img class="gh-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/gladihoppers-logo"></a>',
+        href: 'ebd3jso5iogfsjh25lsdklj/gladihoppers.html',
+        price: 'Free'
+    }, {
         name: 'Block Blast',
         image: 'ebd3jso5iogfsjh25lsdklj/images/blockblast',
         class: 'block-blast',
