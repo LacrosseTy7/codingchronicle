@@ -21,6 +21,62 @@ let userInPlay = '';
 userInPlay = localStorage.getItem('currentUser')
 
 
+function searchFor() {
+    gameHTML = '';
+    const value = document.querySelector('.search-bar').value;
+    games.forEach((game) => {
+        users.forEach((user) => {
+            if (user.username === userInPlay) {
+                if (game.name.toLowerCase().includes(value.toLowerCase())) {
+                    if (user.gamesOwned.includes(game.name) || user.gamesOwned === 'All') {
+                        gameHTML += `
+                            <div class="game-box">
+                                    <a href="${game.href}" class="${game.class}-top-section top-section">
+                                        <div><img class="${game.class}-icon game-icon" src="${game.image}"></div>
+                                        <div class="${game.class}-title game-title">${game.name}</div>
+                                    </a>
+                                    <div class="bottom-section">
+                                        <button class="${game.class}-price-button price-button">OWNED</button>
+                                        <button onclick="favoritesToggle('${game.name}', '${game.class}')" class="favorite-button"><img src="images/non-favorited-game-icon.png" class="${game.class}-favorited favorited-icon"></button>
+                                    </div>
+                                </div>
+                    `
+                    } else if (game.price !== 'Free') {
+                        gameHTML += `
+                            <div class="game-box">
+                                    <a class="${game.class}-top-section top-section">
+                                        <div><img class="${game.class}-icon game-icon" src="${game.image}"></div>
+                                        <div class="${game.class}-title game-title">${game.name}</div>
+                                    </a>
+                                    <div class="bottom-section">
+                                        <button onclick="buyGame('${game.name}', '${game.class}')" class="${game.class}-price-button price-button">$${game.price.toFixed(2)}</button>
+                                        <button onclick="favoritesToggle('${game.name}', '${game.class}')" class="favorite-button"><img src="images/non-favorited-game-icon.png" class="${game.class}-favorited favorited-icon"></button>
+                                    </div>
+                                </div>
+                    `
+                    } else {
+                        gameHTML += `
+                            <div class="game-box">
+                                    <a class="${game.class}-top-section top-section">
+                                        <div><img class="${game.class}-icon game-icon" src="${game.image}"></div>
+                                        <div class="${game.class}-title game-title">${game.name}</div>
+                                    </a>
+                                    <div class="bottom-section">
+                                        <button onclick="buyGame('${game.name}', '${game.class}')" class="${game.class}-price-button price-button">Free</button>
+                                        <button onclick="favoritesToggle('${game.name}', '${game.class}')" class="favorite-button"><img src="images/non-favorited-game-icon.png" class="${game.class}-favorited favorited-icon"></button>
+                                    </div>
+                                </div>
+                    `
+                    }
+                }
+            }
+        })
+    })
+    if (gameHTML === '') {
+        gameHTML = '<h2 style="margin-top: 100px; text-align: center; width: 100%;">No games found!</h2>'
+    } else {gameHTML = gameHTML}
+    document.querySelector('.games-container').innerHTML = gameHTML
+}
 //This code brings you to the login page where you put your username
 function goToLogin() {
     document.querySelector('html').innerHTML = `
