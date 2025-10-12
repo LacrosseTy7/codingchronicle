@@ -17,7 +17,7 @@ const games = [
         name: 'Henry Stickmin',
         image: 'ebd3jso5iogfsjh25lsdklj/images/henrystickmincollection.jpg',
         class: 'stickmin-collection',
-        shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/stickminescapingprison.html"><img class="henry-collection-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/henrystickmincollection.jpg"></a>',
+        shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/stickmincollection.html"><img class="henry-collection-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/henrystickmincollection.jpg"></a>',
         href: 'ebd3jso5iogfsjh25lsdklj/stickmincollection.html',
         price: 'Free'
     }, {

@@ -7,7 +7,7 @@ let users = [
         username: "LacrosseGamer",
         email: "30twilson@go.dsdmail.net",
         password: "um???",
-        shortcuts: "Boredom Button, Henry Stickmin, Bit Planes, Escape 40 Times",
+        shortcuts: ["Boredom Button", "Henry Stickmin", "Bit Planes", "Escape 40 Times"],
         favorites: " Boredom Button",
         gamesOwned: "All"
 
@@ -16,7 +16,7 @@ let users = [
         username: "WaffleKing966",
         email: "waffledogeur@gmail.com",
         password: "Waffledogsyeah",
-        shortcuts: "Boredom Button, Rock Paper Scissors",
+        shortcuts: ["Boredom Button", "Rock Paper Scissors"],
         favorites: " Boredom Button Rock Paper Scissors",
         gamesOwned: "All"
     },
@@ -24,7 +24,7 @@ let users = [
         username: "Jahames12",
         email: "jimmerstripple@gmail.com",
         password: "trackkid",
-        shortcuts: "Boredom Button, Rock Paper Scissors",
+        shortcuts: ["Boredom Button", "Rock Paper Scissors"],
         favorites: " Boredom Button Rock Paper Scissors",
         gamesOwned: ""
     },
@@ -32,7 +32,7 @@ let users = [
         username: "Newt12",
         email: "eriktwilles@gmail.com",
         password: "erikdagoat",
-        shortcuts: "Boredom Button, Rock Paper Scissors",
+        shortcuts: ["Boredom Button", "Rock Paper Scissors"],
         favorites: " Boredom Button Rock Paper Scissors",
         gamesOwned: ""
     },
@@ -40,21 +40,21 @@ let users = [
         username: "jackjack",
         email: "30jsutton@go.dsdmail.net",
         password: "2735",
-        shortcuts: "Angry Birds Escape Road Doge Miner Escaping the Prison",
+        shortcuts: ["Angry Birds", "Escape Road", "Doge Miner", "Escaping the Prison"],
         favorites: "Angry Birds Escape Road Doge Miner Escaping the Prison PolyTrack",
         gamesOwned: "Angry Birds Escape Road Doge Miner Escaping the Prison"
     }, {
         username: "Drewstructo",
         email: "30abradshaw@go.dsdmail.net",
         password: "",
-        shortcuts: "Angry Birds Escape Road Doge Miner Escaping the Prison",
+        shortcuts: ["Angry Birds", "Escape Road", "Doge Miner", "Escaping the Prison"],
         favorites: "Angry Birds Escape Road Doge Miner Escaping the Prison PolyTrack",
         gamesOwned: "Angry Birds Escape Road Doge Miner Escaping the Prison"
     }, {
         username: "dinomax312",
         email: "barnettmax12@gmail.com",
         password: "M@xwell13",
-        shortcuts: "Angry Birds Need For Speed Burrito Bison Launcha Libre PolyTrack",
+        shortcuts: ["Angry Birds", "Need For Speed", "Burrito Bison", "Launcha Libre", "PolyTrack"],
         favorites: "Angry Birds Need For Speed Burrito Bison Launcha Libre PolyTrack Rock Paper Scissors",
         gamesOwned: "Angry Birds Need For Speed Burrito Bison Launcha Libre PolyTrack Rock Paper Scissors"
     }
