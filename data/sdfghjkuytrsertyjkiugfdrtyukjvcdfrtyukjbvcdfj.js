@@ -251,5 +251,12 @@ const games = [
         shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/rb2-main/retrobowl.html"><img class="retrobowl-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/retrobowl-logo"></a>`,
         href: "ebd3jso5iogfsjh25lsdklj/rb2-main/retrobowl.html",
         price: 'Free'
+    }, {
+        name: 'Geometry Dash 3D',
+        image: 'ebd3jso5iogfsjh25lsdklj/images/geometrydashthreed-logo',
+        class: 'geometry-dash-threed',
+        shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/geometrythreed.html"><img class="geometrydashthreed-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/geometrydashthreed-logo"></a>`,
+        href: "ebd3jso5iogfsjh25lsdklj/geometrythreed.html",
+        price: 'Free'
     }
 ];
