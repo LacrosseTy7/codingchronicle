@@ -244,5 +244,12 @@ const games = [
         shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/stickmanhook.html"><img class="stickhook-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/stickmanhook-logo"></a>`,
         href: "ebd3jso5iogfsjh25lsdklj/stickmanhook.html",
         price: 'Free'
+    }, {
+        name: 'Retro Bowl',
+        image: 'ebd3jso5iogfsjh25lsdklj/images/retrobowl-logo',
+        class: 'retro-bowl',
+        shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/rb2-main/retrobowl.html"><img class="retrobowl-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/retrobowl-logo"></a>`,
+        href: "ebd3jso5iogfsjh25lsdklj/rb2-main/retrobowl.html",
+        price: 'Free'
     }
 ];
