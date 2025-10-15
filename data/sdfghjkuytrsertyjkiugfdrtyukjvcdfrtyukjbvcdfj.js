@@ -245,11 +245,18 @@ const games = [
         href: "ebd3jso5iogfsjh25lsdklj/stickmanhook.html",
         price: 'Free'
     }, {
-        name: 'Retro Bowl',
+        name: 'Retro Bowl College',
         image: 'ebd3jso5iogfsjh25lsdklj/images/retrobowl-logo',
         class: 'retro-bowl',
         shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/rb2-main/retrobowl.html"><img class="retrobowl-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/retrobowl-logo"></a>`,
         href: "ebd3jso5iogfsjh25lsdklj/rb2-main/retrobowl.html",
+        price: 'Free'
+    }, {
+        name: 'Retro Bowl',
+        image: 'ebd3jso5iogfsjh25lsdklj/images/retrobowlnorm-logo',
+        class: 'retro-bowl-normal',
+        shortcutHTML: `<a href="ebd3jso5iogfsjh25lsdklj/retrobowl.html"><img class="retrobowlnorm-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/retrobowlnorm-logo"></a>`,
+        href: "ebd3jso5iogfsjh25lsdklj/retrobowl.html",
         price: 'Free'
     }, {
         name: 'Geometry Dash 3D',
