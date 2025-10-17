@@ -3,6 +3,7 @@
     <head>
         <title>Boredom Button</title>
         <link rel="icon" href="images/button.png">
+        <link rel="stylesheet" href="styles/boredom-button.css">
     </head>
     <body style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
         <div style="font-size: 46px;">Bored? Press the button!</div>
@@ -15,14 +16,9 @@
             `
             document.querySelector('img').src = 'images/button-pressed.png'
             setTimeout(() => {
-                document.querySelector('body').innerHTML = `
-                <button onclick='function2()' style='background-color: white; border: none;'><img style='cursor: pointer;'><img></button>
-                <p class='finding' style='color: red; font-size: 32px;'></p>
-                `
-                document.querySelector('.finding').innerHTML = `Nah! I'm actually too bored now.`
-                document.querySelector('link').href = 'images/ZZZ.webp'
-                document.querySelector('img').src = 'images/button.png'
-            }, 15000)
+                let randomGame = getRandomInteger(1, 20)
+                gameChoose(randomGame)
+            }, 5000)
         " style="background-color: white; border: none;"><img style="cursor: pointer;" src="images/button.png"></button>
 
         <script src="scripts/boredom button.js"></script>

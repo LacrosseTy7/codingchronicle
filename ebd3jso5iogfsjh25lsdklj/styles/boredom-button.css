@@ -1,0 +1,73 @@
+.boredom-button-icon {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: rgb(13, 88, 174);
+}
+
+.left-section-header {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.middle-section-header {
+    flex: 1;
+    max-width: 800px;
+    margin-left: 35px;
+    margin-right: 35px;
+
+    display: flex;
+    align-items: center;
+}
+
+.right-section-header {
+    width: 150px;
+    display: flex;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.button-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgb(253, 85, 63);
+    text-shadow: 2px 2px 4px #535353;
+}
+
+.author {
+    font-size: 16px;
+    font-family: Verdana;
+    color: white;
+    margin-left: 15px;
+}
+
+.exit-button {
+    height: 50px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.game-title {
+    text-align: center;
+    width: 704px;
+    color: rgb(255, 170, 0);
+}
+
+.game-player {
+    margin-top: 60px;
+    align-items: center;
+    justify-self: center;
+}
