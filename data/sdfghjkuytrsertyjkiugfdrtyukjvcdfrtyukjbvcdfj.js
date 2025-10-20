@@ -1,17 +1,17 @@
 const games = [
     {
+        name: 'Video Player',
+        image: 'images/videoplayer-logo.png',
+        class: 'video-player',
+        shortcutHTML: '<a href="vids.html"><img class="video-player-shortcut-icon game-shortcut-icon" src="images/videoplayer-logo.png"></a>',
+        href: 'vids.html',
+        price: 'Free'
+    }, {
         name: 'Boredom Button',
         image: 'images/ebd3jso5iogfsjh25lsdklj/button.png',
         class: 'boredom-button',
         shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/boredom button.html"><img class="bored-button-shortcut-icon game-shortcut-icon" src="images/ebd3jso5iogfsjh25lsdklj/button.png"></a>',
         href: 'ebd3jso5iogfsjh25lsdklj/boredom button.html',
-        price: 'Free'
-    }, {
-        name: 'Rock Paper Scissors',
-        image: 'ebd3jso5iogfsjh25lsdklj/images/Rock-Paper-Scissors-Logo.webp',
-        class: 'rock-paper-scissors',
-        shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/rock-paper-scissors.html"><img class="rps-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/Rock-Paper-Scissors-Logo.webp"></a>',
-        href: 'ebd3jso5iogfsjh25lsdklj/rock-paper-scissors.html',
         price: 'Free'
     }, {
         name: 'Henry Stickmin',
@@ -47,6 +47,13 @@ const games = [
         class: 'black-jack-battle',
         shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/blackjackbattle.html"><img class="bjb-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/blackjackbattle.webp"></a>',
         href: 'ebd3jso5iogfsjh25lsdklj/blackjackbattle.html',
+        price: 'Free'
+    }, {
+        name: 'Rock Paper Scissors',
+        image: 'ebd3jso5iogfsjh25lsdklj/images/Rock-Paper-Scissors-Logo.webp',
+        class: 'rock-paper-scissors',
+        shortcutHTML: '<a href="ebd3jso5iogfsjh25lsdklj/rock-paper-scissors.html"><img class="rps-shortcut-icon game-shortcut-icon" src="ebd3jso5iogfsjh25lsdklj/images/Rock-Paper-Scissors-Logo.webp"></a>',
+        href: 'ebd3jso5iogfsjh25lsdklj/rock-paper-scissors.html',
         price: 'Free'
     }, {
         name: 'Castle Wars Modern',
