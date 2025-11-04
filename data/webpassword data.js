@@ -1,1 +1,0 @@
-let webPassword = localStorage.getItem('web-password')
