@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://codespaces+organic-potato-v6q76v76g5vq3x7gx/workspaces/codingchronicle"
+		}
+	],
+	"remoteAuthority": "codespaces+organic-potato-v6q76v76g5vq3x7gx",
+	"settings": {
+		"liveServer.settings.port": 5505
+	}
+}
