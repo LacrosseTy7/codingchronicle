@@ -50,7 +50,7 @@ function checkForCorrectPassword() {
             if (value === user.password && user.name === usernameFound) {
                 console.log('^CORRECT^ !INPUT!')
                 localStorage.setItem('currentUser', JSON.stringify(user.name))
-                window.location.href = '../home/index.html'
+                window.location.href = '../home'
             } else {
                 setTimeout(() => {
                     document.querySelector('.empty-words').innerHTML = "That is an invalid password."
@@ -61,3 +61,4 @@ function checkForCorrectPassword() {
     )
     }
 }
+
