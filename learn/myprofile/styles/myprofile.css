@@ -1,0 +1,102 @@
+.basic-info-container {
+    position: absolute;
+    background-color: rgb(217, 217, 217);
+    width: 620px;
+    margin: 3px;
+    top: 60px;
+    bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.basic-info-title {
+    justify-self: center;
+    font-size: 40px;
+    font-family: monospace;
+    font-variant: small-caps;
+}
+
+.basic-info {
+    margin-left: 35px;
+    font-family: verdana;
+    font-size: 17px;
+}
+
+.friends-container {
+    position: absolute;
+    background-color: rgb(217, 217, 217);
+    width: 620px;
+    margin: 3px;
+    top: 60px;
+    bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    right: 0;
+}
+
+.friends-info-title {
+    justify-self: center;
+    font-size: 40px;
+    font-family: monospace;
+    font-variant: small-caps;
+}
+
+.friend-code-info {
+    font-size: 20px;
+    font-family: courier new;
+    margin-left: 20px;
+}
+
+.add-friend-button {
+    font-size: 20px;
+    margin-left: 30px;
+    border: none;
+    background: blue;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.friend-code-input {
+    background: none;
+    border: 1px solid black;
+    height: 38px;
+    width: 220px;
+    margin-left: 170px;
+    margin-top: 20px;
+}
+
+.friend-code-input::placeholder {
+    color: black;
+    font-size: 15px;
+}
+
+.friend-code-input:focus {
+    outline: none;
+}
+
+.add-button {
+    background: black;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    border: 2px solid white;
+}
+
+.add-button:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.friends-list {
+    margin-left: 40px;
+    margin-top: 70px;
+}
+
+.friend {
+    font-family: impact;
+    margin-top: 10px;
+}
