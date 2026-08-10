@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 90px 24px 24px;
+    background: linear-gradient(135deg, #030b4b, #0c2b9f 60%, #1e6cd6);
+    font-family: 'Edu TAS Beginner', 'Comic Sans MS', cursive;
+    color: white;
+}
+
+.page-shell {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-card {
+    padding: 36px 30px;
+    text-align: left;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    color: #ffd7a1;
+}
+
+.welcome-words {
+    margin: 0 0 12px;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    color: #ffbf47;
+    line-height: 1.15;
+}
+
+.little-description {
+    margin: 0 0 22px;
+    max-width: 720px;
+    font-size: 1rem;
+    color: #ffd7a1;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-actions a {
+    text-decoration: none;
+    padding: 11px 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.primary-link {
+    background-color: #ff7f50;
+    color: white;
+}
+
+.secondary-link {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #fff3dd;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-actions a:hover {
+    transform: translateY(-2px);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.info-card {
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.info-card h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #fff3dd;
+    font-size: 1.1rem;
+}
+
+.info-card p {
+    margin: 0;
+    color: #f7f7f7;
+    line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hamburger-menu-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.hamburger-menu-icon img {
+    height: 35px;
+    display: block;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+    z-index: 8;
+}
+
+.menu-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    padding: 24px 18px;
+    background: linear-gradient(180deg, #071a6d, #0c2b9f);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25);
+    transform: translateX(-100%);
+    transition: transform 220ms ease;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-menu.open {
+    transform: translateX(0);
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 180ms ease;
+}
+
+.side-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.close-menu {
+    align-self: flex-end;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
