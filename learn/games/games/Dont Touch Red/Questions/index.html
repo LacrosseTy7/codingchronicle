@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @keyframes correctPulse {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.08); }
+  60% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+@keyframes confettiBurst {
+  0% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+  100% { opacity: 0; transform: translateY(-120px) rotate(720deg) scale(0); }
+}
+
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-12px); }
+  40% { transform: translateX(12px); }
+  60% { transform: translateX(-8px); }
+  80% { transform: translateX(8px); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #0f0f1a;
+  color: #d0d0ee;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#app {
+  width: 100%;
+}
+
+.question-card {
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid #2a2a4a;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeSlideIn 0.5s ease-out forwards;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #2a2a4a;
+  color: #7c7cff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+#question-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #d0d0ee;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#options-container button {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  background: #0f0f1a;
+  color: #b0b0d0;
+  border: 1px solid #2a2a4a;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#options-container button:hover {
+  border-color: #7c7cff;
+  transform: translateY(-1px);
+}
+
+#options-container button:disabled {
+  cursor: default;
+}
+
+.feedback-banner {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-12px);
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 20;
+}
+
+.feedback-banner.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.feedback-banner.correct {
+  background: #22c55e22;
+  color: #4ade80;
+}
+
+.feedback-banner.wrong {
+  background: #ef444422;
+  color: #f87171;
+}
+
+.animate-correct {
+  animation: correctPulse 0.5s ease-out;
+}
+
+.animate-wrong {
+  animation: wrongShake 0.4s ease-out;
+}
+
+.confetti-piece {
+  animation: confettiBurst 0.8s ease-out forwards;
+  position: absolute;
+  pointer-events: none;
+}
+
+.next-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background: #7c7cff;
+  color: #0f0f1a;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.next-btn:hover:not(:disabled) {
+  opacity: 1;
+  transform: scale(1.05);
+}
+    </style>
+  </head>
+  <body>
+    <div id="confetti-container"></div>
+    <div id="feedback-banner" class="feedback-banner"></div>
+    <div class="question-card" id="question-card">
+      <div id="category-badge" class="category-badge"></div>
+      <p id="question-text"></p>
+      <div id="options-container"></div>
+      <p id="score-display"></p>
+      <button id="next-btn" class="next-btn" type="button">Next Question</button>
+    </div>
+
+    <script>
+      const questions = [
+  { cat: "HTML", q: "Which HTML element is used to define the largest heading?", opts: ["<h6>","<heading>","<h1>","<head>"], ans: 2 },
+  { cat: "HTML", q: "What does the <alt> attribute provide for an <img> tag?", opts: ["A tooltip","Alternative text","A link","Animation"], ans: 1 },
+  { cat: "HTML", q: "Which element creates an unordered list?", opts: ["<ol>","<li>","<list>","<ul>"], ans: 3 },
+  { cat: "HTML", q: "What is the correct HTML for inserting a line break?", opts: ["<break>","<lb>","<br>","<newline>"], ans: 2 },
+  { cat: "CSS", q: "Which property changes the text color of an element?", opts: ["font-color","text-color","color","foreground"], ans: 2 },
+  { cat: "CSS", q: "What does 'z-index' control?", opts: ["Font size","Opacity","Stacking order","Zoom level"], ans: 2 },
+  { cat: "CSS", q: "Which unit is relative to the font-size of the element?", opts: ["px","em","cm","%"], ans: 1 },
+  { cat: "CSS", q: "How do you select an element with id='main' in CSS?", opts: [".main","*main","#main","main"], ans: 2 },
+  { cat: "JavaScript", q: "Which keyword declares a block-scoped variable?", opts: ["var","let","define","dim"], ans: 1 },
+  { cat: "JavaScript", q: "What does '===' check for?", opts: ["Assignment","Type only","Value and type","Approximation"], ans: 2 },
+  { cat: "JavaScript", q: "Which method adds an element to the end of an array?", opts: [".push()",".append()",".add()",".insert()"], ans: 0 },
+  { cat: "JavaScript", q: "What is the output of typeof null?", opts: ["'null'","'undefined'","'object'","'boolean'"], ans: 2 },
+  { cat: "CSS", q: "Which property creates rounded corners?", opts: ["corner-radius","border-round","border-radius","edge-radius"], ans: 2 },
+  { cat: "JavaScript", q: "Which method converts a JSON string to an object?", opts: ["JSON.stringify()","JSON.parse()","JSON.convert()","JSON.read()"], ans: 1 },
+  { cat: "HTML", q: "Which attribute specifies the URL for a link?", opts: ["src","link","href","url"], ans: 2 },
+];
+
+const savedPoints = Number(sessionStorage.getItem('dontTouchRedPoints') || 0);
+let score = savedPoints, quizScore = 0, total = 0, answered = false, usedIndices = [];
+
+const catColors = { HTML: '#f97316', CSS: '#06b6d4', JavaScript: '#f59e0b' };
+
+function updateQuizStats(isCorrect) {
+  const attempts = Number(sessionStorage.getItem('dontTouchRedQuizAttempts') || 0);
+  const correct = Number(sessionStorage.getItem('dontTouchRedQuizCorrect') || 0);
+  sessionStorage.setItem('dontTouchRedQuizAttempts', String(attempts + 1));
+  if (isCorrect) {
+    sessionStorage.setItem('dontTouchRedQuizCorrect', String(correct + 1));
+  }
+}
+
+function goBackToGame() {
+  window.location.href = '../index.html';
+}
+
+const storedTimeLeft = Number(sessionStorage.getItem('dontTouchRedTimeLeft') || 30);
+if (storedTimeLeft > 0) {
+  sessionStorage.setItem('dontTouchRedTimeLeft', String(storedTimeLeft));
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function getRandomQuestion() {
+  if (usedIndices.length >= questions.length) usedIndices = [];
+  let idx;
+  do {
+    idx = Math.floor(Math.random() * questions.length);
+  } while (usedIndices.includes(idx));
+  usedIndices.push(idx);
+  return questions[idx];
+}
+
+function spawnConfetti() {
+  const container = document.getElementById('confetti-container');
+  container.innerHTML = '';
+  const colors = ['#7c7cff','#f59e0b','#06b6d4','#f97316','#22c55e'];
+  for (let i = 0; i < 20; i++) {
+    const piece = document.createElement('div');
+    piece.className = 'confetti-piece';
+    piece.style.cssText = `left:${40+Math.random()*20}%;top:${40+Math.random()*20}%;width:8px;height:8px;border-radius:${Math.random()>0.5?'50%':'2px'};background:${colors[i%colors.length]};animation-delay:${Math.random()*0.3}s;`;
+    container.appendChild(piece);
+  }
+}
+
+function loadQuestion() {
+  answered = false;
+  const nextBtn = document.getElementById('next-btn');
+  nextBtn.style.opacity = '0';
+  nextBtn.style.pointerEvents = 'none';
+  document.getElementById('confetti-container').innerHTML = '';
+  document.getElementById('feedback-banner').className = 'feedback-banner';
+
+  const card = document.getElementById('question-card');
+  card.classList.remove('fade-slide-in');
+  void card.offsetWidth;
+  card.classList.add('fade-slide-in');
+
+  const current = getRandomQuestion();
+  const badge = document.getElementById('category-badge');
+  badge.textContent = current.cat;
+  badge.style.color = catColors[current.cat];
+  badge.style.background = catColors[current.cat] + '18';
+
+  document.getElementById('question-text').textContent = current.q;
+
+  const container = document.getElementById('options-container');
+  container.innerHTML = '';
+  current.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.style.cssText = `background:#0f0f1a;color:#b0b0d0;border:1px solid #2a2a4a;cursor:pointer;`;
+    btn.textContent = opt;
+    btn.onmouseenter = () => { if (!answered) btn.style.borderColor = '#7c7cff'; };
+    btn.onmouseleave = () => { if (!answered) btn.style.borderColor = '#2a2a4a'; };
+    btn.onclick = () => handleAnswer(i, current.ans, container);
+    container.appendChild(btn);
+  });
+}
+
+function handleAnswer(selected, correct, container) {
+  if (answered) return;
+  answered = true;
+  total++;
+  const btns = container.children;
+  const feedbackBanner = document.getElementById('feedback-banner');
+
+  if (selected === correct) {
+    quizScore++;
+    updateQuizStats(true);
+    btns[selected].style.cssText = `background:#22c55e22;color:#22c55e;border:1px solid #22c55e;cursor:default;`;
+    btns[selected].classList.add('animate-correct');
+    feedbackBanner.textContent = 'Correct!';
+    feedbackBanner.className = 'feedback-banner show correct';
+    spawnConfetti();
+
+    setTimeout(() => {
+      goBackToGame();
+    }, 700);
+  } else {
+    updateQuizStats(false);
+    btns[selected].style.cssText = `background:#ef444422;color:#ef4444;border:1px solid #ef4444;cursor:default;`;
+    btns[selected].classList.add('animate-wrong');
+    btns[correct].style.cssText = `background:#22c55e22;color:#22c55e;border:1px solid #22c55e;cursor:default;`;
+    feedbackBanner.textContent = 'Not quite!';
+    feedbackBanner.className = 'feedback-banner show wrong';
+
+    setTimeout(() => {
+      loadQuestion();
+    }, 700);
+  }
+
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].style.pointerEvents = 'none';
+  }
+
+  document.getElementById('score-display').textContent = `Game points: ${score} • Quiz: ${quizScore}/${total}`;
+}
+
+// Initialize
+loadQuestion();
+    </script>
+  </body>
+</html>

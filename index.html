@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coding Chronicle</title>
+        <link rel="icon" href="./learn/images/cc-square-logo">
+        <link rel="stylesheet" href="./learn/styles/header.css">
+        <link rel="stylesheet" href="./styles/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left-section-header">
+                <button class="hamburger-menu-icon" aria-label="Open menu" onclick="toggleMenu()">
+                    <img src="./learn/images/hamburger-menu" alt="Menu">
+                </button>
+                <div class="home-container" onclick="window.location.href = './index.html'">
+                    <img class="home-logo" src="./learn/images/cc-square-logo">
+                    <span class="home-words">Coding Chronicle</span>
+                </div>
+            </div>
+            <div class="middle-section-header"></div>
+            <div class="right-section-header">
+                <button onclick="window.location.href = './learn/login'" class="login-button">
+                    <img class="login-icon" src="./learn/images/login-logo">
+                </button>
+            </div>
+        </header>
+
+        <main class="page-shell">
+            <section class="hero-card">
+                <p class="eyebrow">Learning hub</p>
+                <h1 class="welcome-words">A place to learn coding and explore creative projects.</h1>
+                <p class="little-description">This site brings together lessons, quizzes, and games so students can build web skills at their own pace while staying engaged and inspired.</p>
+                <div class="hero-actions">
+                    <a class="primary-link" href="./learn/home/index.html">Go to Learn</a>
+                    <a class="secondary-link" href="./learn/games/index.html">Try the Games</a>
+                </div>
+            </section>
+
+            <section class="info-grid">
+                <article class="info-card">
+                    <h2>Learn by doing</h2>
+                    <p>Step through guided activities and build confidence with practical web development lessons.</p>
+                </article>
+                <article class="info-card">
+                    <h2>Stay engaged</h2>
+                    <p>Quizzes and games turn coding practice into something interactive and fun to explore.</p>
+                </article>
+                <article class="info-card">
+                    <h2>Great for beginners</h2>
+                    <p>Everything is designed to feel approachable, encouraging, and easy to follow.</p>
+                </article>
+            </section>
+        </main>
+
+        <div class="menu-overlay" onclick="toggleMenu(false)"></div>
+        <nav class="side-menu" id="sideMenu">
+            <button class="close-menu" aria-label="Close menu" onclick="toggleMenu(false)">&times;</button>
+            <a href="./index.html">Home</a>
+            <a href="./learn/home/index.html">Learn</a>
+            <a href="./learn/quizzes/index.html">Quizzes</a>
+            <a href="./learn/games/index.html">Games</a>
+            <a href="./learn/login/index.html">Login</a>
+        </nav>
+
+        <script>
+            function toggleMenu(forceOpen) {
+                const menu = document.getElementById('sideMenu');
+                const overlay = document.querySelector('.menu-overlay');
+                const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !menu.classList.contains('open');
+
+                menu.classList.toggle('open', shouldOpen);
+                overlay.classList.toggle('visible', shouldOpen);
+            }
+        </script>
+    </body>
+</html>
+

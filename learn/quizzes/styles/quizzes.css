@@ -1,0 +1,12 @@
+body {
+    background-color: cornflowerblue;
+}
+
+.welcome-words {
+    margin: 0;
+    font-size: 70px;
+    justify-self: center;
+    color: rgb(255, 202, 103);
+    font-family: georgia;
+    text-decoration: underline wavy;
+}
